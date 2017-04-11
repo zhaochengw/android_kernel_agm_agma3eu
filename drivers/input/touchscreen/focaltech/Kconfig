@@ -1,0 +1,32 @@
+#
+# Focaltech Touchscreen driver configuration
+#
+
+config TOUCHSCREEN_FT5X06_FH
+       bool "FocalTech touchscreens FH support."
+       depends on TOUCHSCREEN_FT5X06
+       help
+         Say Y here if you need a ft5X06 touchscreen FH function.
+	 else say N
+
+config TOUCHSCREEN_FT5X06_GESTURE
+       bool "FocalTech touchscreens gesture function"
+       depends on TOUCHSCREEN_FT5X06
+       help
+         Say Y here if you need a ft5X06 touchscreen gesture function.
+	 else say N
+
+config TOUCHSCREEN_FT5X06_GESTURE_DRIVER
+       bool "FocalTech touchscreens gesture function realized in driver"
+       depends on TOUCHSCREEN_FT5X06_GESTURE
+       help
+         Say Y here if you need a ft5X06 touchscreen gesture function in driver.
+	 else say N
+
+config TOUCHSCREEN_FACE_DETECTION
+       bool "FocalTech touchscreens face detection function realized in driver"
+       depends on TOUCHSCREEN_FT5X06
+       help
+         Say Y here if you need a ft5X06 touchscreen gesture function in driver.
+	 else say N
+

@@ -1,0 +1,49 @@
+
+qcom,2586452_hisense_t99_5600mah_averaged_masterslave_sept19th2016 {
+	/* #2586452_Hisense_T99_5600mAh_averaged_MasterSlave_Sept19th2016*/
+	qcom,max-voltage-uv = <4350000>;
+	qcom,nom-batt-capacity-mah = <5600>;
+	qcom,batt-id-kohm = <100>;
+	qcom,battery-beta = <3380>;
+	qcom,battery-type = "hs-agma3-4v35-5600mAh";
+	qcom,chg-rslow-comp-c1 = <3496248>;
+	qcom,chg-rslow-comp-c2 = <5923402>;
+	qcom,chg-rs-to-rslow = <656014>;
+	qcom,chg-rslow-comp-thr = <0xB4>;
+	qcom,checksum = <0xDC36>;
+	qcom,gui-version = "PMI8950GUI - 2.0.0.16";
+	qcom,fg-profile-data = [
+		 CA 83 6E 77 
+		 D7 7B FA 74 
+		 59 83 44 67 
+		 BB 83 AE 8E 
+		 7B 82 FF 92 
+		 AD B4 36 C0 
+		 52 16 FA 83 
+		 D7 7C A5 80 
+		 34 76 54 83 
+		 3C 6A F7 78 
+		 62 86 5B 82 
+		 6C 99 C2 BC 
+		 AD C9 5C 0D 
+		 3C 16 F8 5A 
+		 CE 6E B3 FB 
+		 B1 38 2D 46 
+		 DE 2B 00 00 
+		 76 4C 1A 3B 
+		 6E 3B 00 00 
+		 00 00 00 00 
+		 00 00 00 00 
+		 DD 6A 04 69 
+		 CC 64 3D 8A 
+		 B6 7C 17 73 
+		 CF 63 A4 81 
+		 59 75 14 70 
+		 64 58 1A 99 
+		 3F 22 58 B4 
+		 4E A0 71 0C 
+		 28 00 FF 36 
+		 F0 11 30 03 
+		 00 00 00 0C 
+	];
+};

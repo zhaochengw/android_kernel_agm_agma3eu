@@ -1,0 +1,22 @@
+#
+# Goodix GT1x Touchscreen driver
+#
+config TOUCHSCREEN_GT1X_GESTURE
+	tristate "Goodix GT1x touchpanel for gesture"
+	depends on TOUCHSCREEN_GT1XX
+	default n
+	help
+	  This is application debug interface support for Goodix GT9xx
+	  touchscreens.
+
+	  Say Y here if you want to have a Android app debug interface
+	  to your system.
+
+	  If unsure, say N.
+
+config TOUCHSCREEN_GT1X_FH
+	tristate "Goodix GT1x touchpanel for frequency hopping"
+	depends on TOUCHSCREEN_GT1XX
+	default n
+	help
+	  This is frequency hopping support for Goodix GT1x

@@ -1,0 +1,35 @@
+/* Copyright (c) 2013-2014, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+&tlmm_pinmux {
+	unused-gpio-init {
+		qcom,pins = <&gp 60>, <&gp 61>, <&gp 86>,
+				<&gp 87>, <&gp 88>, <&gp 89>,
+				<&gp 91>, <&gp 92>, <&gp 96>,
+				<&gp 97>, <&gp 100>, <&gp 101>,
+				<&gp 102>, <&gp 104>, <&gp 110>,
+				<&gp 111>, <&gp 114>, <&gp 120>,
+				<&gp 121>, <&gp 122>, <&gp 123>,
+				<&gp 126>, <&gp 127>, <&gp 129>,
+				<&gp 130>, <&gp 132>;
+
+		qcom,num-grp-pins = <26>;
+		qcom,pin-func = <0>;
+		label = "unused-gpio-init";
+		unused_gpio_default: unused_gpio_default {
+			drive-strength = <2>;
+			bias-pull-down;
+			input-enable;
+		};
+	};
+};
+

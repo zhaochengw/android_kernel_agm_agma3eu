@@ -1,0 +1,51 @@
+comment "product Infomation"
+config MACH_HIS_SMARTPHONE
+	bool "HIS SMARTPHONE"
+	default n
+	help
+	  Support for the his samrtphone board.
+
+config HIS_VENDOR_NAME
+	depends on MACH_HIS_SMARTPHONE
+	string "His vendor info"
+	default ""
+	help
+	  The vendor name of product.
+
+config HIS_PRODUCT_NAME
+	depends on MACH_HIS_SMARTPHONE
+	string "His product info"
+	default ""
+	help
+	  The product name.
+
+config HIS_BOOT_INFO
+	bool "His Boot information"
+	depends on MACH_HIS_SMARTPHONE
+	default n
+	help
+	  The information of booting system.
+
+config USB_CDROM_NAME
+	string "USB CDROM Name"
+	depends on MACH_HIS_SMARTPHONE
+	default "HsMoCorp"
+	help
+	  his usb cdrom name .
+
+config USB_OTG_DOUBLE_CHECK
+	bool "check OTG ID from PM and CPU"
+	depends on HISENSE_USB_FEATURE
+	default n
+	help
+	  check OTG ID from PM and CPU.
+
+config SUBSYS_ERR_REPORT
+	bool "report subsystem failed event by uevent"
+	default n
+	help
+	  Enable it when collect the subsystem state report
+	  if unsure, say N
+
+source "drivers/soc/his/rs_recorder/Kconfig"
+

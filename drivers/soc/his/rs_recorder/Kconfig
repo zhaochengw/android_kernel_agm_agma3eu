@@ -1,0 +1,22 @@
+
+config RS_RECORDER_SUPPORT
+	bool "support runtime state recoder"
+	default n
+	help
+	  print error info to buffer when happen runtime error
+
+config RS_RECORDER_ARCHIVE
+	bool "support compress log dir to the db file"
+	depends on RS_RECORDER_SUPPORT
+	default n
+	help
+	  compress log dir to the db file, then delete the dir.
+
+config SUPPORT_WARM_RESET
+	bool "current platform support warm reset"
+	depends on RS_RECORDER_SUPPORT
+	default n
+	help
+	  If use platform support warm reset, then say Y,
+	  or N.
+
