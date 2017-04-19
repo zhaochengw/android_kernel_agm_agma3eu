@@ -225,7 +225,7 @@
 		enable-active-high;
 	};
 
-	fpc1020@1 {
+	/*fpc1020@1 {
 		status = "ok";
 		reg = <1>;
 		compatible = "fpc,fpc1020";
@@ -239,13 +239,42 @@
 		fpc,use_fpc2050 = <1>;
 		fpc,enable-on-boot;
 		fpc,enable-wakeup;
-		/* EV_MSC, MSC_SCAN */
 		fpc,event-type = <4>;
 		fpc,event-code = <4>;
 
 		pinctrl-names = "fpc1020_reset_reset",
 						"fpc1020_reset_active",
 						"fpc1020_irq_active";
+
+		pinctrl-0 = <&fpc_reset_reset>;
+		pinctrl-1 = <&fpc_reset_active>;
+		pinctrl-2 = <&fpc_irq_active>;
+	};*/
+
+	fpc1020@1 {
+		status = "ok";
+		compatible = "fpc,fpc1020";
+		input-device-name = "fpc1020";
+		interrupt-parent = <&msm_gpio>;
+		interrupts = <48 0x0>;
+		fpc,gpio_rst	= <&msm_gpio 62 0>;
+		fpc,gpio_irq	= <&msm_gpio 48 0>;
+		fpc,use_fpc2050 = <1>;
+		fpc,enable-on-boot;
+		fpc,enable-wakeup;
+		/* EV_MSC,MSC_SCAN */
+		fpc,event-type = <4>;
+		fpc,event-code = <4>;
+
+		spi-max-frequency = <4800000>;
+		spi-qup-id = <1>;
+		clock-names = "iface_clk","core_clk";
+		clocks = <&clock_gcc clk_gcc_blsp1_ahb_clk>,
+		<&clock_gcc clk_gcc_blsp1_qup1_spi_apps_clk>;
+
+		pinctrl-names = "fpc1020_reset_reset",
+				"fpc1020_reset_active",
+				"fpc1020_irq_active";
 
 		pinctrl-0 = <&fpc_reset_reset>;
 		pinctrl-1 = <&fpc_reset_active>;
