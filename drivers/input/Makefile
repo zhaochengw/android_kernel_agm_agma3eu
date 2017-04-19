@@ -30,3 +30,5 @@ obj-$(CONFIG_INPUT_KEYCOMBO)	+= keycombo.o
 obj-$(CONFIG_SENSORS_HALL)	+= hall_sensor.o
 obj-$(CONFIG_FPC_TEE)		+= fpc1020_tee.o
 obj-$(CONFIG_EGIS_ET310)		+= et310.o
+
+obj-$(CONFIG_FINGERPRINT_FPC1020) += fpc/
